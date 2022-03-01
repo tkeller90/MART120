@@ -1,0 +1,18 @@
+﻿<html>
+        <head>
+            <title>Contact Me</title>
+        </head>
+  <h1>Contact me</h1>
+        <body>
+            
+            <form action="nextPage.html" type="Post">
+                Name: <input type="text" id="Name"><br>
+                Email: <input type="text" id="Email"><br>
+                <button id="mySubmit" type="submit">Submit</button>
+   <h3>Do you agree to lend me your soul?</h3>
+        <!-- add more radio buttons -->
+        <input type="radio" name="color" value="blue">Yes<br>
+        <input type="radio" name="color" value="red">No<br>
+            </form>
+        </body>
+</html>

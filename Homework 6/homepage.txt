@@ -1,0 +1,13 @@
+﻿<html>
+        <head>
+            <title>Tegan Keller</title>
+        </head>
+        <body>
+            <h1>Welcome</h1>
+            <p>I am an art student at the University of Montana. I am raising two elementary school aged children. I don’t think I’ve played with HTML in twenty year. I built guild websites for the text-based role playing games I played using html.</p>
+            <p>I am looking forward to what we will be doing with these pages!
+            <br />
+<a href=”http://story.html”>
+<a href=”http://contact.html”>
+        </body>
+</html>
