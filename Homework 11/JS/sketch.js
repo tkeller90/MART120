@@ -5,6 +5,7 @@ var tophatDirection = 2;
 var hatrimX = 100;
 var hatrimY = 75;
 var hatrimDirection = 2;
+var hatrimColor = (50, 55, 100);
 
 var torsoX = 150;
 var torsoY = 170;
@@ -25,6 +26,7 @@ var sizeDirection = 2;
 var headX = 200;
 var headY = 120;
 var headW = 100;
+var headWDirection = 2;
 
 var leftarmX = 120;
 var leftarmY = 180;
@@ -39,11 +41,18 @@ function setup() {
 function draw() {
   background(120,0,110);
 
-  // head /
+  // head + head getting bigger and smaller /
 fill (128, 128, 255)
   ellipse(headX, headY, headW);
- 
-
+      headW+=headWDirection;
+ if(headW <= 200 )
+        {
+            headW+=2;
+        }
+        else
+        {
+            headW-=100;
+        }
    // mouth straight line /
   fill (100, 0, 50);
   line(190, 140, 210, 140);
@@ -73,10 +82,12 @@ strokeWeight(2);
         hatrimDirection *= -1;
         movement = floor(random() * 10) + 1;
 
-}
+    }
+    
       // shoulder /
   fill (128, 128, 255);
 rect(130, 180, 140, 30, 30);
+
 
      // right arm / 
   fill (128, 128, 255);
@@ -86,21 +97,23 @@ rect(130, 180, 140, 30, 30);
       //this is not working when testing/ 
   fill (128, 128, 255);
   rect(leftarmX, leftarmY, 30, 140, 30);
-      if(leftarmY <= 0 || leftarmY >= 300 )
-    { leftarmDirection *= -1;
-      movement *= -1;
-
-    }
+if(leftarmX <= 300)
+        {
+            leftarmX+=10;
+        }
+        if(leftarmY <= 400)
+        {
+            leftarmY+=10;
+        }
 
       // right leg + Y axis movement1/
   fill (128, 128, 255);
   rect(rightlegX, rightlegY, 40, 130);
       rightlegY += rightlegDirection;
-    if(rightlegY <= 0 || rightlegY >= 300 )
+   if(rightlegY <= 0 || rightlegY >= 300 )
     {
-        rightlegDirection *= -1 ;
-       movement *= -1;
-
+        rightlegDirection *= -1;
+      movement *= -1;
     }
   
 
